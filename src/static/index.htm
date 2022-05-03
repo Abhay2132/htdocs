@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<HTML>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<HEAD>
+		<script src="js/eruda.min.js" onload="eruda.init()"></script>
+		<TITLE> Hindi Typing </TITLE>
+		<link rel ="stylesheet" href="css/ui.css" />
+	</HEAD>
+	<body>
+		<h1> Hindi Typing </h1>
+		
+		<div id="view" class="t-c" contenteditable="true">
+			Plug in the Keyboard and Touch Here before start टाइपिंग ....
+		</div>
+		<center>
+			<button class="size" onclick="decreaseSize()"> - </button>
+			<button class = "clearAll" onclick="clearView()"> Clear ALL </button>
+			<button class = "size" onclick="increaseSize()"> + </button>
+		</center>
+		<center class="loadnsave" >
+			<button class="load" onclick="load()">Load</button>
+			<button class="save" onclick="save()" >Save</button>
+		</center>
+	</body>
+	<script src="js/main.js"></script>
+	<script type="text/javascript">
+		window.onload = function () {
+			let script = document.createElement("script");
+			fetch("/js/acss.min.js")
+			.then( d => d.text())
+			.then( txt => {
+				script.innerHTML = txt
+				document.body.appendChild(script);
+			})
+		}
+	</script>
+</HTML>
