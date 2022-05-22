@@ -1,0 +1,17 @@
+body {
+	margin: 0;
+}
+
+#text {
+	padding: 10px;
+	text-align: center;
+	background : #eee;
+	border-radius: 5px;
+	margin: 10px;
+	position: absolute;
+	width: calc(100% - 40px - 40px);
+	max-height: 4rem;
+	overflow: scroll;
+	bottom: 0px;
+	border-sizing: border-box;
+}
